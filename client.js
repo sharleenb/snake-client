@@ -21,14 +21,30 @@ const connect = function () {
   conn.on("connect", () => {
     connectionSuccess();
     conn.write("Name: SB");
-
   });
 
+  conn.on("connect", () => {
+     connectionSuccess();
+     setTimeout(() => {
+      conn.write("Move: up");
+      setTimeout(() => {
+        conn.write("Move: left");
+        setTimeout(() => {
+          conn.write("Move: down");
+          setTimeout(() => {
+            conn.write("Move: right");
+          }, 2000)
+        }, 2000)
+      }, 2000)
+     }, 2000)
+  }); 
+  
   return conn;
 };
+
 
 console.log("Connecting ...");
 connect();
 
 
-module.exports = connect; 
+module.exports = connect;
