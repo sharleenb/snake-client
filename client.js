@@ -38,13 +38,9 @@ const connect = function () {
       }, 2000)
      }, 2000)
   }); 
-  
+
   return conn;
 };
-
-
-console.log("Connecting ...");
-connect();
 
 
 module.exports = connect;
