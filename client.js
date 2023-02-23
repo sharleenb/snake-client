@@ -21,23 +21,9 @@ const connect = function () {
   conn.on("connect", () => {
     connectionSuccess();
     conn.write("Name: SB");
+    conn.write("Say: GL!")
+    conn.write("Say: Catch up!")
   });
-
-  conn.on("connect", () => {
-     connectionSuccess();
-     setTimeout(() => {
-      conn.write("Move: up");
-      setTimeout(() => {
-        conn.write("Move: left");
-        setTimeout(() => {
-          conn.write("Move: down");
-          setTimeout(() => {
-            conn.write("Move: right");
-          }, 2000)
-        }, 2000)
-      }, 2000)
-     }, 2000)
-  }); 
 
   return conn;
 };
