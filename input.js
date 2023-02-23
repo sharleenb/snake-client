@@ -24,6 +24,12 @@ const setUpInput = (conn) => {
     if (key === 'd') {
       conn.write("Move: right");
     }
+    if (key === 'x') {
+      conn.write("Say: GL!")
+    }
+    if (key === 'z') {
+      conn.write("Say: Catch up!")
+    }
   };
 
   stdin.on("data", handleUserInput);
