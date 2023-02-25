@@ -8,27 +8,27 @@ const setUpInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  const handleUserInput = function(key) {
-    if (key === '\u0003') {
+  const handleUserInput = function (key) {
+    if (key === "\u0003") {
       process.exit();
     }
-    if (key === 'w') {
+    if (key === "w") {
       conn.write("Move: up");
     }
-    if (key === 'a') {
+    if (key === "a") {
       conn.write("Move: left");
     }
-    if (key === 's') {
+    if (key === "s") {
       conn.write("Move: down");
     }
-    if (key === 'd') {
+    if (key === "d") {
       conn.write("Move: right");
     }
-    if (key === 'x') {
-      conn.write("Say: GL!")
+    if (key === "x") {
+      conn.write("Say: GL!");
     }
-    if (key === 'z') {
-      conn.write("Say: Catch up!")
+    if (key === "z") {
+      conn.write("Say: Catch up!");
     }
   };
 

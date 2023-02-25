@@ -1,15 +1,15 @@
 const net = require("net");
 const { host, port } = require("./constants");
 
-const connectionSuccess = function() {
+const connectionSuccess = function () {
   console.log("Successfully connected to game server");
-}
+};
 
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
     host,
-    port
+    port,
   });
 
   // interpret incoming data as text
@@ -26,6 +26,5 @@ const connect = function () {
 
   return conn;
 };
-
 
 module.exports = connect;
