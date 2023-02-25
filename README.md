@@ -17,5 +17,5 @@ This server code is a heavily modified version of the single player game Snek cr
 
 ## Controls
 
-- Use the WASD keys to move up, down, left and right
+- Use the WASD keys to move up, left, down and right
 - Use the Z and X keys to shoot out a message throughout the game
